@@ -9,6 +9,16 @@ library(assertthat)
 # * Arrange the output in descending order.
 # * Calculate the sum of people who moved to Hamburg between 2019 and 2021 and store the result in the object hamburg_pop_increase and name the column differenz_sum
 
+hamburg_df <- data.frame(
+  bezirk = c("Hamburg-Mitte", "Altona", "Eimsbüttel", "Hamburg-Nord","Wandsbeck","Bergedorf","Harburg"),
+  einwohner = c(301543,275264,267051,314593,441012,130260,169426),
+  bevoelkerungsdichte = c(2121,3534,5362,5443,2990,841,1353),
+  bezirksamtsleiter = c("Droßmann","von Berg","Gätgens","Werner-Boelz","Ritzenhoff","Dornquast","Fredenhagen"),
+  flaeche = c(TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE)
+)
+
+
+
 if(
   assert_that(
     has_name(hamburg_2021, "bezirk"),
